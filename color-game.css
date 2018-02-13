@@ -1,15 +1,15 @@
+
 .container{
-	size:200px;
-	background: red;
-	margin: auto 0;
-	height: 300px;
+	max-width:600px;
+	margin: 0 auto;
 }
 .tiles{
 	margin: 1.6%;
 	width:30%;
 	float: left;
-	background: white;
-	height: 30%;
+	background: purple;
+	padding-bottom:30%;
+	/*height:span;*/
 }
 h1{
 	text-align: center;
