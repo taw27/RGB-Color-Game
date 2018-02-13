@@ -5,6 +5,7 @@ document.getElementById("new-colors-button").addEventListener("click",newColorCl
 
 //function for new colors
 function newColorClicked(){
+    document.querySelector("h1").style.color="white";
     randomRgb=randomRgbString();
     var tileHard=6;
     correctTile= Math.floor(Math.random()*5)+1;
@@ -26,6 +27,7 @@ function newColorClicked(){
 //turns all tile and text that color if correct tile
 function correctTileClicked(){
     var tile= document.getElementsByClassName("tiles");
+    document.querySelector("h1").style.color="rgb"+randomRgb;
     for(var i=0;i<tile.length;i++){
         tile[i].style.background="rgb"+randomRgb;
     }
