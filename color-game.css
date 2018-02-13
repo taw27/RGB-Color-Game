@@ -1,0 +1,18 @@
+.container{
+	size:200px;
+	background: red;
+	margin: auto 0;
+	height: 300px;
+}
+.tiles{
+	margin: 1.6%;
+	width:30%;
+	float: left;
+	background: white;
+	height: 30%;
+}
+h1{
+	text-align: center;
+	background: blue;
+	color: white;
+}
