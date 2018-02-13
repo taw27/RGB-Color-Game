@@ -1,8 +1,11 @@
+
+var randomRgb;
 var correctTile;
 document.getElementById("new-colors-button").addEventListener("click",newColorClicked);
+
 //function for new colors
 function newColorClicked(){
-    var randomRgb=randomRgbString();
+    randomRgb=randomRgbString();
     var tileHard=6;
     correctTile= Math.floor(Math.random()*5)+1;
     //changes header
@@ -16,10 +19,21 @@ function newColorClicked(){
             document.getElementById("tile-"+correctTile).style.background="rgb"+randomRgb;
 
         }
-    }
-
+    }   
+    document.getElementById("tile-"+correctTile).addEventListener("mousedown",correctTileClicked); 
 }
-//Function to for
+
+//turns all tile and text that color if correct tile
+function correctTileClicked(){
+    var tile= document.getElementsByClassName("tiles");
+    for(var i=0;i<tile.length;i++){
+        tile[i].style.background="rgb"+randomRgb;
+    }
+    //removes event listener of tiles before returning
+    document.getElementById("tile-"+correctTile).removeEventListener("mousedown",correctTileClicked
+    );
+}
+
 // function that returns random rgb String
 function randomRgbString(){
     var rgbArray=[Math.floor(Math.random()*255),Math.floor(Math.random()*255),Math.floor(Math.random()*255)];
